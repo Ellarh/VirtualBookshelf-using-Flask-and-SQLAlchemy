@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Book</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Rate your favorite Book</h1>
+    <div class="add-form">
+            <form action="{{ url_for('add') }}" method="POST">
+                <label class="labels">Book Name</label>
+                <input type="text" name="title">
+                <label class="labels">Book Author</label>
+                <input type="text" name="author">
+                <label class="labels">Rating</label>
+                <input type="text" name="rating"> <br/>
+                <div class="add-button">
+                    <button class="btn btn-success add" type="submit">Add Book</button>
+                </div>
+        </form>
+    </div>
+</body>
+</html>
